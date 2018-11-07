@@ -4,10 +4,8 @@ def my_select(collection)
     i = 0
     new_collection = []
     while i < collection.size
-      var = yield collection[i]
-      if var
-        new_collection << collection[i]
-      end
+      retrn = yield collection[i]
+      retrn ? new_collection.push(collection[i]) : nil
       i += 1
     end
     new_collection
