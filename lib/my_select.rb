@@ -4,7 +4,8 @@ def my_select(collection)
     i = 0
     new_collection = []
     while i < collection.size
-      if yield collection[i] == true
+      var = yield collection[i]
+      if var
         new_collection << collection[i]
       end
       i += 1
